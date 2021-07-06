@@ -1,25 +1,14 @@
-import ReactDOM from "react-dom"
-import Highlight from './Highlight'
-
-function render(component) {
-  const container = document.createElement('div')
-  document.body.appendChild(container)
-
-  ReactDOM.render(component, container)
-}
-
-afterEach(() => {
-  document.body.innerHTML = "";
-});
+import { render, screen } from "@testing-library/react";
+import Highlight from "./Highlight";
 
 test("renders a value", () => {
   const value = "3000";
   render(<Highlight value={value} />);
-  expect(document.body.textContent).toBe(value);
+  expect(screen.getByText(value)).toBeInTheDocument();
 });
 
 test("renders another value", () => {
   const value = "5000";
   render(<Highlight value={value} />);
-  expect(document.body.textContent).toBe(value);
+  expect(screen.getByText(value)).toBeInTheDocument();
 });
