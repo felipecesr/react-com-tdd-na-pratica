@@ -7,7 +7,7 @@ test("submitting the form calls onSubmit with value and coin", () => {
   render(<Form onSubmit={handleSubmit} />);
 
   userEvent.type(screen.getByLabelText(/valor/i), "3000");
-  userEvent.selectOptions(screen.getByLabelText(/moeda/i), ["USD"]);
+  userEvent.selectOptions(screen.getByLabelText(/moeda/i), "USD");
   userEvent.click(screen.getByRole("button", { name: /calcular/i }));
 
   expect(handleSubmit).toHaveBeenCalledWith({
