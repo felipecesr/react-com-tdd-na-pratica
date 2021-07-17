@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from '@testing-library/user-event'
+import userEvent from "@testing-library/user-event";
 import Form from "./Form";
 
 test("submitting the form calls onSubmit with value and coin", () => {

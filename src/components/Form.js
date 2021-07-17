@@ -23,7 +23,7 @@ const Form = ({ onSubmit }) => {
 
       <button type="submit">Calcular</button>
     </form>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

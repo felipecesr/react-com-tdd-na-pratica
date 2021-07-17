@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Form from "./components/Form";
 import Highlight from "./components/Highlight";
-import { multiply } from './utils/math'
+import { multiply } from "./utils/math";
 
 const App = () => {
   const [value, setValue] = useState(null);
@@ -26,9 +26,9 @@ const App = () => {
     <>
       <Form onSubmit={handleSubmit} />
       <Highlight value={value} />
-      {error && <div role="alert">{error}</div>}
+      {error ? <div role="alert">{error}</div> : null}
     </>
-  )
+  );
 };
 
 export default App;

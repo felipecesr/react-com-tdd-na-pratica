@@ -1,7 +1,7 @@
 export function multiply(a, b) {
   if (isNaN(a) || isNaN(b)) {
-    throw new Error('Arguments must be numbers')
+    throw new Error("Arguments must be numbers");
   }
 
-  return a * b
+  return a * b;
 }

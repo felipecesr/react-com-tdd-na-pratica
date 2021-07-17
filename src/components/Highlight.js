@@ -1,3 +1,3 @@
-const Highlight = ({ value }) => <div>{value}</div>
+const Highlight = ({ value }) => <div>{value}</div>;
 
-export default Highlight
+export default Highlight;
